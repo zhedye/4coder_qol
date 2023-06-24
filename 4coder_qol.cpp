@@ -5,6 +5,10 @@
 
 //#define AUTO_CENTER_AFTER_JUMPS true
 
+#include "4coder_qol_token.h"
+#include "4coder_qol_lister.h"
+#define run_lister qol_run_lister
+
 CUSTOM_ID(colors, defcolor_type);
 CUSTOM_ID(colors, defcolor_function);
 CUSTOM_ID(colors, defcolor_macro);
@@ -15,7 +19,6 @@ CUSTOM_ID(colors, defcolor_primitive);
 CUSTOM_ID(colors, defcolor_struct);
 CUSTOM_ID(colors, defcolor_non_text);
 
-#include "4coder_qol_token.h"
 #include "4coder_default_include.cpp"
 
 #include "4coder_qol_helper.h"
@@ -44,6 +47,8 @@ function void qol_setup_default_mapping(Mapping *mapping, i64 global_id, i64 fil
 
 #include "4coder_qol_commands.cpp"
 #include "4coder_qol_draw.cpp"
+#include "4coder_qol_lister.cpp"
+
 #include "4coder_qol_bindings.cpp"
 #include "4coder_qol_hooks.cpp"
 
