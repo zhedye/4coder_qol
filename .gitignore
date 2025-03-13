@@ -1,0 +1,5 @@
+custom_4coder.*
+.session.4coder
+4coder_command_metadata.i
+custom/generated/command_metadata.h
+custom/generated/managed_id_metadata.cpp
