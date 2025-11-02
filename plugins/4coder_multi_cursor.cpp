@@ -85,8 +85,9 @@ function MC_Command_Kind MCi_kind(Command_Map *map){
 }
 
 function MC_Command_Kind MCi_kind(Custom_Command_Function *f){
-  MC_Command_Kind kind = MC_Command_Kind(-1);
-  table_read(&mc_context.table, PtrAsInt(f), (u64*)&kind);
+  u64 kind_u64 = 0;
+  table_read(&mc_context.table, PtrAsInt(f), (u64*)&kind_u64);
+  MC_Command_Kind kind = (MC_Command_Kind)kind_u64;
   return kind;
 }
 
